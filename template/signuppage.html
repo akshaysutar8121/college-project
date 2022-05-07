@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("https://wallpapercave.com/dwp1x/ebSPdrI.jpg");
+            background-size: cover;
+        }
+
+        .container {
+            height: 600px;
+            width: 300px;
+            margin: auto;
+            margin-top: 30px;
+            border: 1px solid yellow;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        input {
+            margin: 15px;
+            height: 30px;
+            border: none;
+            font-size: 17px;
+        }
+
+        .sub {
+            background-color: yellow;
+            width: 70px;
+            border-radius: 10px;
+
+        }
+
+        .messege {
+            background-color: white;
+            text-transform: capitalize;
+            height: 40px;
+            color:blue;
+            border:1px solid blue;
+
+        }
+
+        .lower {
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            margin-top: 20px;
+            background-color: yellow;
+            color: black;
+            height: 30px;
+            width: 70px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .profile_image {
+            color: white;
+            display: flex;
+            margin-left: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/signup" method="POST" autocomplete="off">
+            <input type="email" name='email' placeholder="Enter email" required>
+            <input type="password" name="password" placeholder="Enter password" required />
+
+            <input type="date" name='date' />
+            <input type="text" name='phone' placeholder="Mobile" required />
+            <input type="text" placeholder="Country" name="country" id="state" required>
+            <input type="submit" class="sub" value='register'>
+            <!-- <div class="profile_image">
+                <p class='place'>upload profile</p>
+                <input type="file" class="profile" name='profile' value="kj">
+            </div> -->
+        </form>
+        <div class="lower">
+            <div class="messege">{{result}}</div>
+            <a href="/login">sign in</a>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

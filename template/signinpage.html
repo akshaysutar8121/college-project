@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Redirect</title>
+    <style>
+        body {
+            background-image: url("https://wallpapercave.com/dwp1x/ebSPdrI.jpg");
+            background-size: cover;
+        }
+
+        .container {
+            height: 400px;
+            width: 300px;
+            margin: auto;
+            margin-top: 30px;
+            border: 1px solid yellow;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        input {
+            margin: 20px;
+            height: 30px;
+            border: none;
+            font-size: 17px;
+        }
+
+        .sub {
+            background-color: yellow;
+            width: 70px;
+            border-radius: 10px;
+        }
+
+        .messege {
+            background-color: white;
+            text-transform: capitalize;
+            height: 30px;
+            color:blue;
+
+        }
+
+        .lower {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            margin-top: 20px;
+            background-color: yellow;
+            color: black;
+            height: 30px;
+            width: 70px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .foot{
+          margin-top: 20px;
+          display:flex;
+        }
+        .foot a{
+          height:40px;
+          width:70px;
+          margin:auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/login" method="POST" autocomplete="off">
+            <input type="email" name='email' placeholder="Enter email">
+            <input type="password" name="password" placeholder="Enter password" />
+            <input type="submit" class="sub" value="sign in">
+        </form>
+        <div class="lower">
+            <div class="messege">{{result}}</div>
+            <div class='foot'>
+              <a href="/signup">New user</a>
+              <a href="/resetpass">Forgot Password</a>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

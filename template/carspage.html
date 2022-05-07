@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars information</title>
+<script>
+
+
+
+</script>
+<style>
+  .outer{
+    display:grid;
+    grid: 500px / auto auto auto;
+    
+  }
+  .inner{
+    margin-left:5px;
+    margin-right:5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .inner a{
+    text-decoration: none;
+    color: black;
+    
+  }
+  .inner img{
+    height: 250px;
+    width: 300px;
+    margin-top:5px;
+  }
+  .inner a:hover{
+    background-color: yellow;
+  }
+  body{
+    background-color: silver;
+  }
+  .navigation {
+            margin-top: 0%;
+            height: 50px;
+            width: 100%;
+
+
+        }
+        .navigation ul{
+            margin-top: 0%;
+            height: 50px;
+            width: 100%;
+            display:flex;
+            list-style-type:none;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+        }
+
+        .navigation ul li {
+            height: 40px;
+            width: 150px;
+            text-align: center;
+            margin:auto;
+
+        }
+        .navigation ul li a{
+          text-decoration:none;
+          color:black;
+          
+          margin:auto;
+        }
+
+        .navigation ul li:hover {
+            background-color: yellow;
+
+        }
+</style>
+
+</head>
+<body>
+  <nav class='navigation'>
+        <ul>
+            <li><a href='/'/>Home</a></li>
+            <li><a href='/cars'>Cars</a></li>
+            <li><a href="/chatbot">Help</a></li>
+            <li><a href='/login'>login</a></li>
+
+        </ul>
+    </nav>
+
+
+  <div class='outer'>
+    {% for i in result %} 
+  <div class='inner'>
+    <img src={{i.0}}></img>
+    <p class='name'>name:{{i.1}}</p>
+    <p class='model'>model:{{i.2}}</p>
+    <p class='price'>price:{{i.3}}</p>
+    <a href={{i.4}} class='wiki'>Know more</a> 
+    
+    </div>
+    {% endfor %}
+    </div>
+</body>
+</html>

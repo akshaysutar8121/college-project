@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <style>
+        body {
+            background-image: url("https://wallpapercave.com/dwp1x/ebSPdrI.jpg");
+            background-size: cover;
+        }
+
+        .container {
+            height: 400px;
+            width: 300px;
+            margin: auto;
+            margin-top: 30px;
+            border: 1px solid yellow;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        input {
+            margin: 20px;
+            height: 30px;
+            border: none;
+            font-size: 17px;
+        }
+
+        .sub {
+            background-color: yellow;
+            width: 70px;
+            border-radius: 10px;
+        }
+
+        .messege {
+            background-color: white;
+            text-transform: capitalize;
+            height: 30px;
+            margin:20px;
+
+        }
+
+        .lower {
+            margin-top: 20px;
+            display: flex;
+
+        }
+
+        a {
+            text-decoration: none;
+            margin: 10px;
+            background-color: yellow;
+            color: black;
+            height: 30px;
+            width: 70px;
+            text-align: center;
+            border-radius: 10px;
+            text-transform: capitalize;
+            font-size: 17px;
+        }
+        /* .messege{
+          color:black;
+          background-color:white;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/resetpass" method="POST" autocomplete="off">
+            <input type="email" name='email' placeholder="Enter email to reset password">
+
+            <input type="submit" class="sub" value="reset">
+        </form>
+        <div class="lower">
+            <a href="/login">sign in</a>
+            <a href="/signup">sign up</a>
+        </div>
+        <div class='messege'>
+          {{result}}
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- <box-icon name='gmail' type='logo' animation='tada' rotate='90' color='#b15858' ></box-icon> -->
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+      <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+      <style>
+      body{
+        background-color: rgb(203 213 225);
+      }
+      </style>
+
+   <script>
+    
+
+
+var sele=document.querySelector(".profile");
+var parent=document.querySelector('.mainbody');
+var profile_menu=document.querySelector('.profile_menu');
+
+
+var flag=true;
+sele.addEventListener("click",()=>{
+  if(flag){
+    profile_menu.style.display='flex';
+    flag=false;
+    
+  }
+  else{
+    profile_menu.style.display='none';
+    flag=true;
+  }
+
+
+
+})
+
+var box=document.querySelector('box-icon');
+
+sele.addEventListener('mouseover',()=>{
+  var attr=document.createAttribute('animation');
+  attr.value='tada';
+  sele.setAttributeNode(attr);
+
+
+
+});
+     </script>   
+  </head>
+  <body class='bg-neutral-300'>
+    <div class="mainbody grid grid-cols-4 grid-flow-row gap-4  m-2 capitalize">
+      <div class='profile bg-white h-8 text-center cursor-pointer  border border-black font-mono flex justify-center sticky top-0 hover:bg-yellow-200'><box-icon name='user-circle'class='mr-1' ></box-icon >profile</div>
+
+ 
+      <div class='bg-white h-8 text-center  border border-black font-mono flex justify-center sticky top-0  hover:bg-yellow-200'> <box-icon type='solid' name='home' class='mr-1'></box-icon>home</div> 
+
+
+      <div class='bg-white h-8 text-center  border border-black font-mono flex justify-center sticky top-0 hover:bg-yellow-200 '><box-icon type='solid' name='car' class='mr-1'></box-icon>cars</div>
+      <div class='bg-white h-8 text-center  border border-black font-mono flex justify-center sticky top-0  hover:bg-yellow-200'><box-icon name='help-circle' type='solid'  class='mr-1'animation='flashing' ></box-icon>help</div>
+
+      <!-- profilemenu div -->
+      <div class='profile_menu bg-white h-auto w-1/2 col-span-4 hidden text-sm capitalize flex-col justify-center content-center text-center font-serif sticky top-0 hover:bg-yellow-300'>
+        <img src="http://licl.in/tutorial/images/user.png" alt="no_image" class='h-20 w-20 m-auto'>
+        <span>name:{{name}}</span>
+
+
+        <span class='align-center
+        '>eamil:{{email}}</span>
+        <div class="buttons">
+          <button class="m-2 bg-green-300 border border-black p-1 rounded-sm hover:bg-green-500">change password
+            </button >
+            <a href='/logout' class="m-2 bg-green-300 border border-black p-1 rounded-sm hover:bg-green-500">logout</a>
+        </div>
+      
+      </div>
+      
+      {% for i in result2 %}
+      <div class='bg-white h-auto text-sm'>
+        <img class='p-1'src={{i.2}}></img>
+        
+        <p class='text-center m-2'>name:{{i.0}}</p>
+        <p class='text-center m-2'>adress:{{i.1}}</p>
+        
+
+      
+      </div>
+      {% endfor %}
+      
+      
+
+
+    </div>
+    <script>
+     console.log('hello! akshay');
+
+// var j=document.getElementsByClassName('profile');
+// function fun(){
+//   alert('ajkshay');
+// }
+var sele=document.querySelector(".profile");
+var parent=document.querySelector('.mainbody');
+var profile_menu=document.querySelector('.profile_menu');
+
+// sele.addEventListener("click",()=>{
+//   var nele=document.createElement('div');
+//   nele.style.height='100px';
+//   parent.append(nele);
+//   nele.style.backgroundColor='white';
+//   nele.innerHTML='thisis div';
+
+// });
+var flag=true;
+sele.addEventListener("click",()=>{
+  if(flag){
+    profile_menu.style.display='flex';
+    flag=false;
+    console.log("akshysutar")
+  }
+  else{
+    profile_menu.style.display='none';
+    flag=true;
+  }
+
+
+
+})
+
+var box=document.querySelector('box-icon');
+
+sele.addEventListener('mouseover',()=>{
+  var attr=document.createAttribute('animation');
+  attr.value='tada';
+  sele.setAttributeNode(attr);
+
+
+
+});
+     </script>   
+    <script src='/content/drive/MyDrive/collegecarproject/scriptfile.js'>
+      </script>
+
+
